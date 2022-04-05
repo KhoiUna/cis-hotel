@@ -33,6 +33,7 @@ $(function () {
     if (form.checkValidity()) {
       form.reset();
       form.classList.remove("was-validated");
+      document.querySelector("#warn").style.display = "none";
       document.querySelector("#success").style.display = "block";
     } else {
       document.querySelector("#warn").innerText = "Invalid form";
