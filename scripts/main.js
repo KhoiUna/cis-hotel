@@ -34,4 +34,8 @@ $(function () {
 
   $("#check-in-date").datepicker();
   $("#check-out-date").datepicker();
+  $("#clear").click(() => {
+    form.classList.remove("was-validated");
+    form.reset();
+  });
 });
