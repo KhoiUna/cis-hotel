@@ -39,6 +39,17 @@ $(() => {
       form.classList.remove("was-validated");
       document.querySelector("#warn").style.display = "none";
       document.querySelector("#success").style.display = "block";
+
+      submittedData.style.display = "block";
+      submittedData.innerText =
+        "First name: " +
+        firstName +
+        "\n" +
+        "Last name: " +
+        lastName +
+        "\n" +
+        "Email: " +
+        email;
     } else {
       document.querySelector("#warn").innerText = "Invalid form";
       document.querySelector("#warn").style.display = "block";
