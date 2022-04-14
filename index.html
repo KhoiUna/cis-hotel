@@ -20,32 +20,7 @@
   </head>
 
   <body>
-    <div
-      class="container-fluid"
-      style="
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap-reverse;
-        align-items: center;
-      "
-    >
-      <div class="container info-container">
-        <ul>
-          <li>
-            <a href="https://github.com/KhoiUna/cis-hotel" target="_blank"
-              >Source code</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fkhoiuna.github.io%2Fcis-hotel%2F"
-              target="_blank"
-              >Nu checker</a
-            >
-          </li>
-        </ul>
-      </div>
-
+    <div class="container-fluid">
       <div class="container form-container">
         <div class="mb-3">
           <h1>Hotel Form</h1>
@@ -158,6 +133,10 @@
               <p id="warn">Invalid form</p>
             </div>
 
+            <div class="mb-3">
+              <p id="submitted_data"></p>
+            </div>
+
             <div class="mb-3" style="text-align: center; margin-top: 0.5rem">
               <button id="clear" type="button" class="btn btn-secondary">
                 Clear
@@ -167,6 +146,25 @@
           </form>
         </div>
       </div>
+
+      <footer>
+        <div class="container info-container">
+          <ul>
+            <li>
+              <a href="https://github.com/KhoiUna/cis-hotel" target="_blank"
+                >Source code</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fkhoiuna.github.io%2Fcis-hotel%2F"
+                target="_blank"
+                >Nu checker</a
+              >
+            </li>
+          </ul>
+        </div>
+      </footer>
     </div>
 
     <script

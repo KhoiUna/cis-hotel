@@ -1,0 +1,8 @@
+{
+  "firstName": "Alex",
+  "lastName": "Doe",
+  "email": "alexdoe@example.com",
+  "checkInDate": "1/1/2022",
+  "checkOutDate": "12/12/2022",
+  "breakfastServed": false
+}
