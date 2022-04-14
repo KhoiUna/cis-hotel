@@ -1,6 +1,3 @@
-// Declare DOM elements
-const form = document.querySelector(".needs-validation");
-
 // Declare functions
 const validateForm = () => {
   form.classList.add("was-validated");
@@ -14,22 +11,29 @@ const validateForm = () => {
     document.querySelector(".breakfast-dropdown").style.display = "none";
 };
 
-$(function () {
+$(() => {
+  // Validate form onchange & onkeyup
   form.addEventListener("change", validateForm);
   form.addEventListener("keyup", validateForm);
+
+  // Validate form when submit
   form.addEventListener("submit", (event) => {
+    //Stop form from reloading page
     event.preventDefault();
     event.stopPropagation();
 
+    // Get dates from datepickers
     const checkInDate = new Date($("#check-in-date").datepicker("getDate"));
     const checkOutDate = new Date($("#check-out-date").datepicker("getDate"));
 
     if (!(checkOutDate > checkInDate)) {
+      document.querySelector("#success").style.display = "none";
       document.querySelector("#warn").innerText =
         "Check-out date should be later than check-in date";
       return (document.querySelector("#warn").style.display = "block");
     }
 
+    // If form is valid, reset form & display success message, else show warning
     if (form.checkValidity()) {
       form.reset();
       form.classList.remove("was-validated");
@@ -41,6 +45,7 @@ $(function () {
     }
   });
 
+  // Initialize datepickers
   $("#check-in-date").datepicker();
   $("#check-out-date").datepicker();
 
