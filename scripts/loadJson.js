@@ -4,7 +4,7 @@ $(() => {
     clearForm();
 
     // Fetch data from JSON file
-    fetch("/scripts/sample.json")
+    fetch("/sample.json")
       .then((response) => response.json())
       .then((response) => {
         firstName = response.firstName;
